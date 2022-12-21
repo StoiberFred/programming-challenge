@@ -14,7 +14,13 @@ public final class App {
      */
     public static void main(String... args) {
 
-        // Your preparation code …
+        String weather = "C:\\Users\\Frederik\\Documents\\eXXcelent\\programming-challenge\\src\\main\\resources\\de" +
+                "\\exxcellent\\challenge\\weather.csv";
+        String football = "C:\\Users\\Frederik\\Documents\\eXXcelent\\programming-challenge\\src\\main\\resources\\de" +
+                "\\exxcellent\\challenge\\football.csv";
+
+        Table table = Table.readFromCsv(weather);
+        System.out.println(table);
 
         String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
