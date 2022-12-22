@@ -1,7 +1,5 @@
 package de.exxcellent.challenge;
 
-import java.util.List;
-
 /**
  * The entry class for your solution. This class is only aimed as starting point and not intended as baseline for your software
  * design. Read: create your own classes and packages as appropriate.
@@ -22,12 +20,9 @@ public final class App {
                 "\\exxcellent\\challenge\\football.csv";
 
         Table table = Table.readFromCsv(weather);
-        System.out.println(table);
+        table.appendColumn(table.subtractIntegerColumns("MxT", "MnT", "TempSpread"));
 
-        List<String> s = table.calculateNumericDistanceBetween("MxT", "MnT");
-        s.forEach(System.out::println);
-
-        String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
+        String dayWithSmallestTempSpread = table.getMinimumOfIntegerColumn("TempSpread");
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
         String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
