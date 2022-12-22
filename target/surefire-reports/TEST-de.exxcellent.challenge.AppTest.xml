@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.exxcellent.challenge.AppTest" time="0.051" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.exxcellent.challenge.AppTest" time="0.05" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="DE"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\Frederik\AppData\Local\Temp\surefire11159978189914411116\surefirebooter5869308127986239002.jar C:\Users\Frederik\AppData\Local\Temp\surefire11159978189914411116 2022-12-22T12-15-18_403-jvmRun1 surefire5675010974059465997tmp surefire_04107492533012835099tmp"/>
+    <property name="sun.java.command" value="C:\Users\Frederik\AppData\Local\Temp\surefire18170455541441456265\surefirebooter3182756857794672976.jar C:\Users\Frederik\AppData\Local\Temp\surefire18170455541441456265 2022-12-22T12-48-13_007-jvmRun1 surefire9333824606406710066tmp surefire_02081666953352349870tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Frederik\Documents\eXXcelent\programming-challenge\target\test-classes;C:\Users\Frederik\Documents\eXXcelent\programming-challenge\target\classes;C:\Users\Frederik\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.0-M1\junit-jupiter-engine-5.8.0-M1.jar;C:\Users\Frederik\.m2\repository\org\apiguardian\apiguardian-api\1.1.1\apiguardian-api-1.1.1.jar;C:\Users\Frederik\.m2\repository\org\junit\platform\junit-platform-engine\1.8.0-M1\junit-platform-engine-1.8.0-M1.jar;C:\Users\Frederik\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Frederik\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0-M1\junit-platform-commons-1.8.0-M1.jar;C:\Users\Frederik\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0-M1\junit-jupiter-api-5.8.0-M1.jar;C:\Users\Frederik\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.4.20\kotlin-stdlib-jdk8-1.4.20.jar;C:\Users\Frederik\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.4.20\kotlin-stdlib-1.4.20.jar;C:\Users\Frederik\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.4.20\kotlin-stdlib-common-1.4.20.jar;C:\Users\Frederik\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar;C:\Users\Frederik\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.4.20\kotlin-stdlib-jdk7-1.4.20.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Frederik\AppData\Local\Temp\surefire11159978189914411116\surefirebooter5869308127986239002.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Frederik\AppData\Local\Temp\surefire18170455541441456265\surefirebooter3182756857794672976.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -58,12 +58,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="runFootball" classname="de.exxcellent.challenge.AppTest" time="0.034">
-    <system-out><![CDATA[[29, 16, 22, 18, 24, 20, 16, 21, 54, 20, 32, 15, 11, 2, 9, 20, 24, 30, 20, 27, 27, 26, 22, 13, 18, 33, 19, 16, 22, 45]
-{22=26, 23=22, 24=13, 25=18, 26=33, 27=19, 28=16, 29=22, 30=45, 10=20, 11=32, 12=15, 13=11, 14=2, 15=9, 16=20, 17=24, 18=30, 19=20, 1=29, 2=16, 3=22, 4=18, 5=24, 6=20, 7=16, 8=21, 9=54, 20=27, 21=27}
-Day with smallest temperature spread : [14]
-Team with smallest goal spread       : A good team
+  <testcase name="runFootball" classname="de.exxcellent.challenge.AppTest" time="0.031">
+    <system-out><![CDATA[Day with smallest temperature spread : [14]
+Team with smallest goal spread : [Aston_Villa]
 ]]></system-out>
   </testcase>
-  <testcase name="aPointlessTest" classname="de.exxcellent.challenge.AppTest" time="0.005"/>
+  <testcase name="aPointlessTest" classname="de.exxcellent.challenge.AppTest" time="0.003"/>
 </testsuite>

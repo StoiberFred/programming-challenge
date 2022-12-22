@@ -76,30 +76,6 @@ public class Table {
         return List.of(column);
     }
 
-    public List<String> subtractIntegerColumns(String firstColumn, String secondColumn) {
-        ArrayList<String> columnOne = new ArrayList<>(getColumnByHeader(firstColumn));
-        columnOne.remove(0);
-        ArrayList<String> columnTwo = new ArrayList<>(getColumnByHeader(secondColumn));
-        columnTwo.remove(0);
-        String[] result = new String[columnOne.size() + 1];
-
-        if (ListIsInteger(columnOne) && ListIsInteger(columnTwo)) {
-
-            for(int index = 0; index < columnOne.size(); index++) {
-                result[index + 1] = Integer.toString(
-                        Integer.parseInt(columnOne.get(index)) - Integer.parseInt(columnTwo.get(index))
-                );
-                result[0] = "Sub" + firstColumn + secondColumn;
-            }
-
-        } else {
-            throw new IllegalArgumentException("We can not compare columns, that are not of the same type and do not " +
-                    "contain integer values.");
-        }
-
-        return List.of(result);
-    }
-
     public List<String> subtractIntegerColumns(String firstColumn, String secondColumn, String newColumnName) {
         ArrayList<String> columnOne = new ArrayList<>(getColumnByHeader(firstColumn));
         columnOne.remove(0);
@@ -124,6 +100,16 @@ public class Table {
         return List.of(result);
     }
 
+    public void applyAbsolutToColumn(String columnHeader){
+        ArrayList<String> column = new ArrayList<>(getColumnByHeader(columnHeader));
+        column.remove(0);
+        List<String> newColumn = column.stream().map(Integer::parseInt).map(Math::abs).map(String::valueOf).collect(Collectors.toList());
+        int columnNmbr = getCells().get(0).indexOf(columnHeader);
+        for(int row=0; row<getCells().size(); row++){
+            getCells().get(row).set(columnNmbr, newColumn.get(row));
+        }
+    }
+
     public void appendColumn(List<String> newColumn) {
         ArrayList<List<String>> wholeTable = new ArrayList<>(getCells());
         for(int index = 0; index < wholeTable.size(); index++){
@@ -144,10 +130,9 @@ public class Table {
         }
         ArrayList<Integer> parsedColumn = column.stream()
                 .map(Integer::parseInt).collect(Collectors.toCollection(ArrayList::new));
-        System.out.println(parsedColumn);
+
         Map<String, Integer> integerValuesMappedToIndex = IntStream.range(0, indexColumn.size()).boxed()
                 .collect(Collectors.toMap(indexColumn::get, parsedColumn::get));
-        System.out.println(integerValuesMappedToIndex);
 
         Collections.sort(parsedColumn);
 
@@ -155,4 +140,5 @@ public class Table {
 
         return keys.toString();
     }
+
 }

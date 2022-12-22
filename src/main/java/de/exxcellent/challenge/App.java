@@ -25,7 +25,11 @@ public final class App {
         String dayWithSmallestTempSpread = table.getMinimumOfIntegerColumn("TempSpread");
         System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
 
-        String teamWithSmallestGoalSpread = "A good team"; // Your goal analysis function call …
-        System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread);
+        table = Table.readFromCsv(football);
+        table.appendColumn(table.subtractIntegerColumns("Goals", "Goals Allowed", "GoalDiff"));
+        table.applyAbsolutToColumn("GoalDiff");
+
+        String teamWithSmallestGoalSpread = table.getMinimumOfIntegerColumn("GoalDiff");
+        System.out.printf("Team with smallest goal spread : %s%n", teamWithSmallestGoalSpread);
     }
 }
